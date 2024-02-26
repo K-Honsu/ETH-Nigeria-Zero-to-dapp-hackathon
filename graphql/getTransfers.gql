@@ -1,0 +1,8 @@
+query GetTransfers {
+  transfers(first: 10, where: { id: "transactionHash" }) {
+    id
+    sender
+    receiver
+    amount
+  }
+}
