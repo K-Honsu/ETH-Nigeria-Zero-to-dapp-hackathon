@@ -1,8 +1,12 @@
 {
   "name": "zero-to-dapp",
   "license": "UNLICENSED",
+  "main": "index.js",
   "scripts": {
+    "ts-node" : "ts-node",
+    "start": "ts-node index.ts --transpileOnly",
     "codegen": "graph codegen",
+    "dev": "graphclient serve-dev",
     "build": "graph build",
     "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ zero-to-dapp",
     "create-local": "graph create --node http://localhost:8020/ zero-to-dapp",
@@ -11,6 +15,7 @@
     "test": "graph test"
   },
   "dependencies": {
+    "ts-node": "^10.9.1",
     "@graphprotocol/graph-cli": "0.68.3",
     "@graphprotocol/graph-ts": "0.32.0"
   },
